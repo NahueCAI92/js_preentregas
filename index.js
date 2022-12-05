@@ -27,12 +27,12 @@ validarUsuario(user,pass)
 
 // c) Valide con un bucle que el usuario tiene una arroba. De ser así, envíe el mensaje en consola: "Es un mail válido" e interrumpa el ciclo for con break. 
 const validarArroba = (user) => {
-    for (i=0 ; i < user.lenght ; i++){
+    for (let i=0 ; i < user.lenght ; i++){
         if (user[i].match(/[@]/)){
-            console.log("Es un mail válido")
-            break
+            console.log("Es un mail válido");
+            break;
         } else if (i == (user.lenght -1)){
-            console.log("es un mail invalido")
+            console.log("es un mail invalido");
         }
 }
 }
@@ -42,7 +42,7 @@ validarArroba(user)
 // d) Valide si la contraseña del usuario tiene más de 8 caracteres. En el caso de que tenga más de ocho caracteres, no haga nada. De lo contrario, envíe una alerta con el siguiente mensaje: "Su contraseña es insegura."
 const validarContra = (pass) => {
     if (pass.lenght <= 8){
-        console.log("Su contraseña es insegura")
+        console.log("Su contraseña es insegura");
     }
 }
 
@@ -51,4 +51,14 @@ validarContra(pass)
 
 // e) Valide con un bucle que la contraseña al menos tenga un número. En el caso de que no tenga uno, envíe un prompt que exprese lo siguiente: "Su contraseña debe tener caracteres alfanuméricos. Desea cambiarla?". Si el usuario dice si, entonces cambie el valor de la contraseña.
 
-
+const validarContra2 = (pass) => {
+    for ( let i=0; i <= pass.lenght ; i++){
+        if (pass[i] == 8){
+            console.log("Su contraseña es correcta");
+            break;
+        } else {
+            console.log("Su contraseña debe tener caracteres alfanuméricos");
+            break;
+        }
+    }
+}
